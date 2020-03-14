@@ -11,6 +11,15 @@ levels = {
 }
 #print(number)
 max_count = levels[level]
+
+user_count = int(input('Введите кол-во пользователей: '))
+users = []
+for i in range(user_count):
+    user_name = input(f'Введите Имя Пользователя {i+1}: ')
+    users.append(user_name)
+print(users)
+
+
 while number != user_number:
     count += 1
     if count > max_count:
