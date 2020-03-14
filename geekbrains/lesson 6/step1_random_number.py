@@ -2,15 +2,19 @@
 import random   # подключили библиотеку
 
 number = random.randint(1, 100)
-print(number)
+user_number = None
+count = 0
+#print(number)
+while number != user_number:
+    # Шаг 2. Предложить пользователю ввести число
+    count += 1
+    print(f'Попытка {count}')
+    user_number = int(input('Введите число: '))
+    # Шаг 3. Сравнить данные и вывести результат
+    if number < user_number:
+        print('your number is big')
+    elif number > user_number:
+        print('your number is small')
+    # Шаг 4. Реализовать цикл
 
-# Шаг 2. Предложить пользователю ввести число
-user_number = int(input('Введите число: '))
-
-# Шаг 3. Сравнить данные и вывести результат
-if number == user_number:
-    print('Win')
-elif:
-    print('Lose')
-else:
-    print('else_error')
+print('Win')
