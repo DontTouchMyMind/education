@@ -7,24 +7,19 @@
 # Игра продолжается до тех пор пока компьютер не отгадает число.
 # Примечание: Знаки “=”, “>” и “<” пользователь вводит с клавиатуры для общения с компьютером.
 # Вы можете использовать этот способ или придумать свой.
-
 import random
 
-number = int(input('Enter a number between 0 and 100: '))
-# print(number)
-var_dialogs = None
-a = 1
-b = 100
-comp_number = random.randint(a, b)
-print(comp_number)
-while var_dialogs != '=':
-    var_dialogs = input('Enter your decision (Exam.">","<","="): ')
-    if var_dialogs == '<':
-        b = comp_number
-        comp_number = random.randint(a, b)
-        print(comp_number)
-    elif var_dialogs == '>':
-        a = comp_number
-        comp_number = random.randint(a, b)
-        print(comp_number)
+user_number = int(input('Enter a number between 0 and 100: '))
+result = None
+min_result = 0
+max_result = 100
+
+while result != '=':
+    number = random.randint(min_result, max_result)
+    print(number)
+    result = input('Enter your decision (Exam.">","<","="): ')
+    if result == '<':
+        max_result = number - 1
+    elif result == '>':
+        min_result = number + 1
 print('Its WIN')
