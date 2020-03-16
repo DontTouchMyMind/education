@@ -6,3 +6,10 @@ greating('hello', 'Leo')
 greating('hello', 'Leo', 'Kate')
 greating('hello', 'Leo', 'Kate', 'Max')
 
+
+def get_person(**kwargs):
+    for k, v in kwargs.items(): # The will be a dictionary of arguments
+        print(k, v)
+
+
+get_person(name='Leo', age=20, has_car=True)
