@@ -6,10 +6,10 @@ def print_sep():    # название_функции (вводные парам
     print('-' * 50) # тело функции
 
 print('My first function')
-print('-' * 50)
+print_sep()
 print('Good seporators')
-print('-' * 50)
+print_sep()
 print('What is there are a lot of them?')
-print('-' * 50)
-print('-' * 50)
-print('-' * 50)
+print_sep()
+print_sep()
+print_sep()
