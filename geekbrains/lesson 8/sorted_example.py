@@ -15,7 +15,7 @@ print(sorted(cities))
 def by_count(city):
     return city[1]
 
-
+# Keysorting
 print(sorted(cities, key=by_count))
 
 print(sorted(cities, key=lambda x: x[1]))
