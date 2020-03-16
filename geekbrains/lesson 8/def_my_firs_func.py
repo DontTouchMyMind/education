@@ -7,28 +7,17 @@ def print_sep(sep, sep_len):    # название_функции (вводны�
     print(sep * sep_len)        # тело функции
 
 
-def print_sep_mod(sep, sep_len):
+def get_sep(sep, sep_len):
     return (sep * sep_len)
-
-
-# print('My first function')
-# print_sep()
-# print('Good separators')
-# print_sep()
-# print('What is there are a lot of them?')
-# print_sep()
-# print_sep()
-# print_sep()
 
 # We can change the separator, if we will change input variable
 print_sep('*', 100)
 print_sep('-', 100)
 # We can change the separator and length
 print_sep('+', 50)
-result = print_sep('-', 100)
+# result = print_sep('-', 100)
 # print(result)  # Результат будет None(cм. строку 4)
 # Use the separator in the text
-#
-result_func = print_sep_mod('~', 50)
+result_func = get_sep('~', 50)
 text = 'Hello {} Func {}'.format(result_func, result_func)
 print(text)
