@@ -11,7 +11,7 @@ hello('Leo')
 hello('Max')
 
 
-def greating(name, say):
+def greating(name='everbody', say='Hello'):
     print(say, name)
 
 
@@ -20,5 +20,9 @@ greating('Kate', 'Good day')
 
 # Function call with explicit parameters
 greating(say='hello', name='Loe')   # U can pass parameters in any order
+
+greating()
+greating('leo')
+greating('Kate', 'hi')
 
 
