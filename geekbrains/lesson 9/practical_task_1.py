@@ -3,7 +3,7 @@
 
 
 def main_func(name, age, city):
-    data = str((name, ',', age, 'год(а),', 'проживает в городе', city))
+    data = str('{}, {} год(а), проживает в городе {}'.format(name, age, city))
     return data
 
 
