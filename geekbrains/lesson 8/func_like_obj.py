@@ -47,5 +47,5 @@ def big4(number):
 print(my_filter(numbers, is_not_even))
 print(my_filter(numbers, is_even))
 print(my_filter(numbers, big4))
-
+print(my_filter(numbers, lambda number: number % 3 == 0))
 
