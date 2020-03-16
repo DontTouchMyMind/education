@@ -8,7 +8,7 @@ greating('hello', 'Leo', 'Kate', 'Max')
 
 
 def get_person(**kwargs):
-    for k, v in kwargs.items():  # The will be a dictionary of arguments
+    for k, v in kwargs.items():  # The result will be a dictionary of arguments
         print(k, v)
 
 
