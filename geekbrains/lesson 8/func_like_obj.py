@@ -21,14 +21,31 @@ def to(f_param):
 to(f)
 
 
-def my_filter(numbers):
+def my_filter(numbers, function):
     my_result = []
     for number in numbers:
-        if number % 2 == 0:
+        if function(number):        # if function (examp.'is_even') is right, the True
             my_result.append(number)
     return my_result
 
+
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-print(my_filter(numbers))
+
+
+def is_even(number):
+    return number % 2 == 0
+
+
+def is_not_even(number):
+    return number % 2 != 0
+
+
+def big4(number):
+    return number > 4
+
+
+print(my_filter(numbers, is_not_even))
+print(my_filter(numbers, is_even))
+print(my_filter(numbers, big4))
 
 
