@@ -9,6 +9,6 @@ def main_func(name, age, city):
 
 # Validating of function
 var = main_func('Василий', '21', 'Москва')
-
+print(main_func('max', 33, 'London'))
 print(var)
 print(type(var))
