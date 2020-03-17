@@ -10,25 +10,25 @@
 # В теле функция должна получить параметр damage атакующего и отнять это количество от health атакуемого.
 # Функция должна сама работать со словарями и изменять их значения.
 
-pl_name = input('choose your name: ')
-en_name = input('choose enemy name: ')
+player_name = input('choose your name: ')
+enemy_name = input('choose enemy name: ')
 
 player = {
-    'name' : pl_name,
+    'name' : player_name,
     'health' : 100,
     'damage' : 50
 }
 
 enemy = {
-    'name': en_name,
+    'name': enemy_name,
     'health' : 100,
     'damage' : 50
 }
 
 
 def attack(person1, person2):
-    person1['health'] = person1['health'] - person2['damage']
-
+    # person1['health'] = person1['health'] - person2['damage']
+    person1['health'] -= person2['damage']
 
 attack(player, enemy)
 
