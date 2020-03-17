@@ -1,5 +1,5 @@
-from math import *
-from random import randint, randrange
+from math import *      # import all module contents
+from random import randint, randrange   # import only specific functions
 
 print(pi)
 print(sin(90))
