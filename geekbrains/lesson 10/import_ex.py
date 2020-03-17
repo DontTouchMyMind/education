@@ -1,5 +1,5 @@
-import math
-import random as rd
+import math             # Complete module import
+import random as rd     # Import as alias
 
 
 print(math.pi)
