@@ -25,14 +25,14 @@ enemy = {
 }
 
 
+def get_damage(damage, armor):
+    return damage / armor
+
+
 def attack(person1, person2):
+    damage = int(get_damage(person2['damage'], person1['armor']))
+    person1['health'] = person1['health'] - damage
 
-    def func_1(damage, armor):
-        total = damage / armor
-        return total
-
-    total_damage = int(func_1(person2['damage'], person1['armor']))
-    person1['health'] = person1['health'] - total_damage
 
 attack(player, enemy)
 
