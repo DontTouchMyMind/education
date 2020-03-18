@@ -3,11 +3,15 @@
 # Примечание: Список для проверки введите вручную. Или возьмите этот: [1, 2, 3, 4]
 import sys
 
-my_list = [sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]]
+my_list = [sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5]]
 
 
 def max_list():
     print(max(my_list))
 
 
-max_list()
+def test_2():
+    print('Task_2 was added')
+
+
+#max_list()

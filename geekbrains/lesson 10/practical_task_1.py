@@ -17,7 +17,9 @@ def delete_folder():
         new_path = os.path.join(os.getcwd(), 'dir_{}'.format(i))
         os.rmdir(new_path)
 
+def test_1():
+    print('Task_1 was added')
 
-create_folder()
+#create_folder()
 
-delete_folder()
+#delete_folder()
