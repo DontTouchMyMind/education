@@ -3,11 +3,8 @@
 # Примечание: Попробуйте импортировать как весь модуль целиком (например из задачи 1),
 # так и отдельные функции из модуля.
 
-
-#from .practical_task_1 import create_folder
 import practical_task_1
-#import practical_task_2
-from practical_task_2 import max_list, test_2, my_list
+from practical_task_2 import max_list, get_random
 import sys
 
 command = sys.argv[1]
