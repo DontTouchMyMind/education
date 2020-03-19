@@ -9,3 +9,4 @@
         Lesson 11 - Practical tasks
         Lesson 12 - File processing and Encoding
         Lesson 13 - Practical tasks
+        Lesson 14 - Useful tools, exception handling
