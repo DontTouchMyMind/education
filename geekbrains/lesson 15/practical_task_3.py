@@ -7,4 +7,15 @@
 # result = [1, -3, 2]
 #     Примечание: Список с целыми числами создайте вручную в начале файла.
 #     Не забудьте включить туда отрицательные числа. 10-20 чисел в списке вполне достаточно.
+import copy
 
+
+old_list = [1, -3, 2]
+result = copy.deepcopy(old_list)
+
+def list_func(input_list):
+    input_list = [number for number in input_list if number > 0]
+    return input_list
+
+list_func(old_list)
+print(result)result = copy.deepcopy(input_list)
