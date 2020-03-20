@@ -9,13 +9,17 @@
 #     Не забудьте включить туда отрицательные числа. 10-20 чисел в списке вполне достаточно.
 import copy
 
+old_list = [1, -3, 2, 9, -4, 121, 144, -121, -144, 169]
+result = []
 
-old_list = [1, -3, 2]
-result = copy.deepcopy(old_list)
 
 def list_func(input_list):
-    input_list = [number for number in input_list if number > 0]
-    return input_list
+    for number in input_list:
+        number = number ** 0.5 if number > 0 else number
+        result.append(number)
+
 
 list_func(old_list)
-print(result)result = copy.deepcopy(input_list)
+
+print(result)
+print(old_list)
