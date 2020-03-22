@@ -18,3 +18,7 @@ print(result_pos)
 # Not multiple 4
 result_not_mult = [number for number in numbers if number % 4 != 0]
 print(result_not_mult)
+
+# All conditions in one generator
+result = [number for number in numbers if number > 0 and number == 3 and number != 4]
+print(result)
