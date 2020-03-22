@@ -6,14 +6,16 @@
 # печатаем результат, который вернула функция.
 # Обработать возможность возникновения исключительной ситуации,
 # которая поднимается внутри функции.
-x = 5
+number = int(input('Enter your number'))
 
 
-def func1(input_var):
-    if input_var != 13:
-        result = input_var * 2
-    return result
+def func_1(input_val):
+    if input_val != 13 and input_val in range(1, 101):
+        input_val = input_val ** 2
+    else:
+        raise ValueError('error number')
+    return input_val
 
 
-r = func1(x)
-print(r)
+result = func_1(number)
+print(result)
