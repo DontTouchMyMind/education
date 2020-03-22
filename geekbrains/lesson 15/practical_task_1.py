@@ -8,3 +8,12 @@ fruit_list_2 = ['груша', 'яблоко', 'крыжовник', 'абрик�
 
 result = [fruit for fruit in fruit_list_1 if fruit in fruit_list_2]
 print(result)
+
+# Classic method
+result = []
+
+for fruit in fruit_list_1:
+    if fruit in fruit_list_2:
+        result.append(fruit)
+
+print(result)
