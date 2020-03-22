@@ -12,3 +12,4 @@
         Lesson 14 - Useful tools, exception handling
         Lesson 15 - Pactical tasks
         Lesson 16 - Case study "Console for file manager"
+        Lesson 17 - Practical task
