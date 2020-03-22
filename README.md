@@ -10,3 +10,5 @@
         Lesson 12 - File processing and Encoding
         Lesson 13 - Practical tasks
         Lesson 14 - Useful tools, exception handling
+        Lesson 15 - Pactical tasks
+        Lesson 16 - Case study "Console for file manager"
