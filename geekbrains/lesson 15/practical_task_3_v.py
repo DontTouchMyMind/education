@@ -13,7 +13,7 @@ old_list = [1, -3, 2, 9, -4, 121, 144, -121, -144, 169]
 
 
 def new_sqrt_list(input_list):
-    result = [math.sqrt(number) for number in input_list if number > 0]
+    result = [math.sqrt(number) if number > 0 else number for number in input_list]
     return result
 
 
