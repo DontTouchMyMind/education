@@ -17,7 +17,7 @@
         Source code in 'code'  
         Matrix transpose
         Game for terminal "Guess the world"
-## Tkinter
+## Tkinter(https://www.youtube.com/watch?v=TSyT1uOCZms&list=PLfAlku7WMht4Vm6ewLgdP9Ou8SCk4Zhar&index=6)
         Lesson 4 - grid
         Lesson 5 - bind
         Lesson 6 - mouse_events
