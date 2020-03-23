@@ -13,3 +13,8 @@
         Lesson 15 - Pactical tasks
         Lesson 16 - Case study "Console for file manager"
         Lesson 17 - Practical task
+## Intense_Python
+        Source code in 'code'  
+        Matrix transpose
+        Game for terminal "Guess the world"
+## Tkinter
