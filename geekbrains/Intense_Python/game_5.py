@@ -9,8 +9,7 @@ print(secret_world)
 gamer_world = ['*'] * len(secret_world)  # Вывод - список
 print(''.join(gamer_world))  # Склеили строку, но в памяти он все равно список
 
-# gamer_world[1] = 'г'
-# print(''.join(gamer_world))
+
 error_counter = 0  # Количество попыток
 # Добавим диалог с пользователем
 while True:
@@ -19,12 +18,12 @@ while True:
         continue
 
     if letter in secret_world:
-        for idx, symbol in enumerate(secret_world):
+        for idx, symbol in enumerate(secret_world):  # Нумерует символы
             # print(idx, symbol)
             if letter == symbol:
                 gamer_world[idx] = letter
         # if '*' not in gamer_world:
-        if gamer_world.count('*') == 0:
+        if gamer_world.count('*') == 0:  # Если нет *
             print('Вы победили')
             print('Было загаданно: ', secret_world.upper())
             break
