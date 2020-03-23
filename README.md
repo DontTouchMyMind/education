@@ -18,3 +18,6 @@
         Matrix transpose
         Game for terminal "Guess the world"
 ## Tkinter
+        Lesson 4 - grid
+        Lesson 5 - bind
+        Lesson 6 - mouse_events
