@@ -21,3 +21,7 @@
         Lesson 4 - grid
         Lesson 5 - bind
         Lesson 6 - mouse_events
+        Lesson 7 - keyboard_events
+        Lesson 8 - stopwatch
+        
+        
