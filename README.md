@@ -17,11 +17,20 @@
         Source code in 'code'  
         Matrix transpose
         Game for terminal "Guess the world"
-## Tkinter(https://www.youtube.com/watch?v=TSyT1uOCZms&list=PLfAlku7WMht4Vm6ewLgdP9Ou8SCk4Zhar&index=6)
+## Tkinter(https://www.youtube.com/channel/UChHyBDvI5AJmcPv36M6PUrQ)
         Lesson 4 - grid
         Lesson 5 - bind
         Lesson 6 - mouse_events
         Lesson 7 - keyboard_events
         Lesson 8 - stopwatch
-        
+        Lesson 9 - using OOP
+        Lesson 10 - drop_down menu
+        Lesson 11 - tool bar
+        Lesson 12 - dialog windows
+        Lesson 13 - message boxes
+        Lesson 14 - text editor
+        Lesson 15 - geometric primitives
+        Lesson 16 - static shape changes
+        Lesson 17 - animations
+        my_game
         
