@@ -47,19 +47,29 @@ drop_menu_item_2.add_command(label='Stats')  # should to add command
 drop_menu_item_2.add_separator()
 drop_menu_item_2.add_command(label='Help')  # should to add command
 # Game tools
-label_welcome = Label(main_window, text='center')
-label_difficult = Label(main_window, text='difficult')
-label_attempt = Label(main_window, text='attempt')
-entry1 = Entry(main_window, width=3, font=15)
-button1 = Button(main_window, text='Check it')
+bottom_frame = Frame(main_window)
+bottom_frame.pack(side=BOTTOM)
+
+label_welcome = Label(main_window, text='Welcome to Guess the Number', font=15)
+label_welcome.pack(fill=X, pady=20)
+label_rules = Label(main_window, text='Enter your NUMBER', font=15)
+label_rules.pack(fill=X, pady=20)
+# label_difficult = Label(main_window, text='difficult')
+# label_attempt = Label(main_window, text='attempt')
+entry1 = Entry(bottom_frame, width=3, font=15)
+button1 = Button(bottom_frame, text='Check it')
 label_was_entered = Label(main_window, width=27, font=15)
 
-label_welcome.grid(row=0, column=0)
-label_difficult.grid(row=0, column=1)
-label_attempt.grid(row=0, column=2)
+entry1.pack(side=LEFT)
+button1.pack(side=LEFT)
+label_was_entered.pack(side=LEFT)
 
-entry1.grid(row=1, column=0)
-button1.grid(row=1, column=1)
-label_was_entered.grid(row=1, column=2)
+# label_welcome.grid(column=2, sticky=E)
+# label_difficult.grid(row=1, column=15)
+# label_attempt.grid(row=2, column=2)
+#
+# entry1.grid(row=4, column=0)
+# button1.grid(row=4, column=1)
+# label_was_entered.grid(row=4, column=2)
 
 main_window.mainloop()
