@@ -5,9 +5,9 @@ user_number = None
 count = 0
 level = int(input('Выберети уровень сложности:  '))
 levels = {
-    1:10,
-    2:5,
-    3:3
+    1: 10,
+    2: 5,
+    3: 3
 }
 print(number)
 max_count = levels[level]
@@ -15,9 +15,9 @@ max_count = levels[level]
 user_count = int(input('Введите кол-во пользователей: '))
 users = []
 for i in range(user_count):
-    user_name = input(f'Введите Имя Пользователя {i+1}: ')
+    user_name = input(f'Введите Имя Пользователя {i + 1}: ')
     users.append(user_name)
-#print(users)
+# print(users)
 
 is_winner = False
 winner_name = None
