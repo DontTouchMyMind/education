@@ -1,4 +1,4 @@
-from tkinter import *
+from tkinter import *  # import tkinter as tk
 
 
 def new_win():  # Create new game
@@ -36,7 +36,7 @@ main_window.geometry(f'{G_WIDTH}x{G_HEIGHT}+{left_offset}+{top_offset}')
 
 drop_menu_item_1 = Menu(main_menu, tearoff=0)
 main_menu.add_cascade(label='Game', menu=drop_menu_item_1)
-drop_menu_item_1.add_command(label='New Game')  # should to add command
+drop_menu_item_1.add_command(label='New Game')  # should to add command and bitmap
 drop_menu_item_1.add_command(label='Setting')  # should to add command
 drop_menu_item_1.add_separator()
 drop_menu_item_1.add_command(label='Exit')  # should to add command
