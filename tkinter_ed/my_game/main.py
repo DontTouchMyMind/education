@@ -1,13 +1,20 @@
 from tkinter import *  # import tkinter as tk
 import random
-
-number = random.randint(1, 100)
-user_number = 0
-is_winner = False  # Win condition
+from tkinter.messagebox import *
 
 
-def new_win():  # Create new game
-    pass
+# number = random.randint(1, 100)
+# user_number = 0
+# is_winner = False  # Win condition
+
+
+def new_game():  # Create new game
+    global number, user_number, is_winner, game_started
+
+    number = random.randint(1, 100)
+    user_number = 0
+    is_winner = False  # Win condition
+    game_started = True
 
 
 def exit_app():  # exit
@@ -15,16 +22,30 @@ def exit_app():  # exit
 
 
 def output(event):  # check user input
-    global user_number
+    global user_number, is_winner
 
-    user_number = entry1.get()  # should to add exception!
-    if int(user_number) == number:
-        label_result['text'] = 'Вы победили!'
-    elif int(user_number) > number:
-        label_result['text'] = 'Ваше число больше загаданного!'
-    else:
-        label_result['text'] = 'Ваше число меньше загаданного!'
+    user_number = entry1.get()
 
+    try:
+        if int(user_number) == number:
+            label_result['text'] = 'Вы победили!'
+            is_winner = True
+            win_condition()
+        elif int(user_number) > number:
+            label_result['text'] = 'Ваше число больше загаданного!'
+        else:
+            label_result['text'] = 'Ваше число меньше загаданного!'
+    except ValueError:
+        label_result['text'] = 'Введите число от 0 до 100'
+
+
+def win_condition():
+    if is_winner == True:
+        askretrycancel('AskRetryCancel', 'do you want to play more?')
+
+
+if not new_game():
+    new_game()
 
 # Size window
 G_HEIGHT = 300
@@ -33,7 +54,7 @@ G_WIDTH = 600
 # Create game fields
 main_window = Tk()
 main_menu = Menu(main_window)  # Drop-down menu
-main_window.title('GUESS THE NUMBER')
+main_window.title(f'{number} GUESS THE NUMBER')
 main_window.configure(menu=main_menu, bg='red')  # how can i change color to .png or .bmp???
 main_window.resizable(width=False, height=False)  # Cannot resize window
 # main_window.iconbitmap('???.ico')
