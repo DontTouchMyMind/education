@@ -1,4 +1,9 @@
 from tkinter import *  # import tkinter as tk
+import random
+
+number = random.randint(1, 100)
+user_number = 0
+is_winner = False  # Win condition
 
 
 def new_win():  # Create new game
@@ -6,11 +11,19 @@ def new_win():  # Create new game
 
 
 def exit_app():  # exit
-    pass
+    main_window.destroy()
 
 
-def output():  # check user input
-    pass
+def output(event):  # check user input
+    global user_number
+
+    user_number = entry1.get()  # should to add exception!
+    if int(user_number) == number:
+        label_result['text'] = 'Вы победили!'
+    elif int(user_number) > number:
+        label_result['text'] = 'Ваше число больше загаданного!'
+    else:
+        label_result['text'] = 'Ваше число меньше загаданного!'
 
 
 # Size window
@@ -39,14 +52,16 @@ main_menu.add_cascade(label='Game', menu=drop_menu_item_1)
 drop_menu_item_1.add_command(label='New Game')  # should to add command and bitmap
 drop_menu_item_1.add_command(label='Setting')  # should to add command
 drop_menu_item_1.add_separator()
-drop_menu_item_1.add_command(label='Exit')  # should to add command
+drop_menu_item_1.add_command(label='Exit', command=exit_app)  # should to add command
 
 drop_menu_item_2 = Menu(main_menu, tearoff=0)
 main_menu.add_cascade(label='Info', menu=drop_menu_item_2)
 drop_menu_item_2.add_command(label='Stats')  # should to add command
 drop_menu_item_2.add_separator()
 drop_menu_item_2.add_command(label='Help')  # should to add command
+
 # Game tools
+
 bottom_frame = Frame(main_window)
 bottom_frame.pack(side=BOTTOM)
 
@@ -54,22 +69,17 @@ label_welcome = Label(main_window, text='Welcome to Guess the Number', font=15)
 label_welcome.pack(fill=X, pady=20)
 label_rules = Label(main_window, text='Enter your NUMBER', font=15)
 label_rules.pack(fill=X, pady=20)
-# label_difficult = Label(main_window, text='difficult')
-# label_attempt = Label(main_window, text='attempt')
+label_result = Label(main_window, width=27, font=15)
+label_result.pack(fill=X, pady=20)
+
 entry1 = Entry(bottom_frame, width=3, font=15)
 button1 = Button(bottom_frame, text='Check it')
-label_was_entered = Label(main_window, width=27, font=15)
+label_was_entered = Label(bottom_frame, width=27, font=15)
 
 entry1.pack(side=LEFT)
 button1.pack(side=LEFT)
 label_was_entered.pack(side=LEFT)
 
-# label_welcome.grid(column=2, sticky=E)
-# label_difficult.grid(row=1, column=15)
-# label_attempt.grid(row=2, column=2)
-#
-# entry1.grid(row=4, column=0)
-# button1.grid(row=4, column=1)
-# label_was_entered.grid(row=4, column=2)
+button1.bind('<Button-1>', output)
 
 main_window.mainloop()
