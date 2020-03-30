@@ -41,7 +41,11 @@ def output(event):  # check user input
 
 def win_condition():
     if is_winner == True:
-        askretrycancel('AskRetryCancel', 'do you want to play more?')
+        answer = askretrycancel('AskRetryCancel', 'do you want to play more?')
+        if answer == True:
+            pass
+        else:
+            exit_app()
 
 
 if not new_game():
