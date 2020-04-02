@@ -1,10 +1,11 @@
 import graphics as gr
 
 
-def build_house():
-    # Функция, которая строит дом
-    pass
+def build_house(window, upper_left_corner, width):  # Функция, которая строит дом
+    '''height = calculate_height(width)'''
 
 
-window = gr.GraphWin('Russian game', 100, 100)
-build_house()
+window = gr.GraphWin('Russian game', 300, 300)
+build_house(window, gr.Point(100, 100), 100)
+
+print('Ура дом построен')
