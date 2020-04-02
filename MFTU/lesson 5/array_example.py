@@ -1,7 +1,9 @@
 def array_search(A: list, N: int, x: int):
     """
     Осуществляет поиск числа х в массиве А,
-    в диапазоне от 0 до N-1 индекса включительно
+    в диапазоне от 0 до N-1 индекса включительно.
+    Если в массиве несколько одинаковых элементов,
+    равных х, то вернуть индекс первого по счету.
     :param A:
     :param N:
     :param x:
@@ -18,9 +20,17 @@ def test_array_search():
         print('#test 1 -ok')
     else:
         print('#test 1 - fail')
+
     A2 = [-1, -2, -3, -4, -5]
     m = array_search(A2, 5, -3)
     if m == 2:
+        print('#test 1 -ok')
+    else:
+        print('#test 1 - fail')
+
+    A3 = [10, 20, 30, 10, 10]
+    m = array_search(A3, 5, 10)
+    if m == 0:
         print('#test 1 -ok')
     else:
         print('#test 1 - fail')
