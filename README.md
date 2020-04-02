@@ -36,3 +36,4 @@
 ## MFTU
         Lesson 3 - Number system (numerial base)
         Lesson 4 - Functions
+        Lesson 5 - Arrays in Python
