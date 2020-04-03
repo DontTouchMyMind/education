@@ -32,7 +32,7 @@ def user_data():  # check user input
 
 def win_condition():
     if is_winner == True:
-        answer = askokcancel('AskRetryCancel', 'do you want to play more?')
+        answer = askokcancel('Congratulations!', 'Do you want to play more?')
         if answer == True:
             new_game()
         else:
@@ -54,7 +54,7 @@ main_window = Tk()
 main_menu = Menu(main_window)  # Drop-down menu
 main_window.title('GUESS THE NUMBER')
 main_window.resizable(width=False, height=False)
-
+main_window.configure(menu=main_menu)
 # Main screen position
 real_h = main_window.winfo_screenheight()  # Your screen height
 real_w = main_window.winfo_screenwidth()  # Your screen width
