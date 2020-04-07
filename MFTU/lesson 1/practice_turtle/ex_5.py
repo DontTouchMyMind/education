@@ -17,16 +17,9 @@ turtle.shape('turtle')
 y = 5
 x = 0
 
-for i in range(0, 11):
+for i in range(0, 25):
     x += y
-    square(x)
-
-    turtle.goto(10, 10)
-
-    # turtle.penup()
-    # turtle.left(180)
-    # turtle.forward(y)
-    # turtle.left(90)
-    # turtle.forward(y)
-    #
-    # turtle.pendown()
+    square(2 * x)
+    turtle.penup()
+    turtle.goto(-x, -x)
+    turtle.pendown()
