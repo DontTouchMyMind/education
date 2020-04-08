@@ -33,7 +33,7 @@
         Lesson 16 - static shape changes
         Lesson 17 - animations
         my_game
-## MFTU
+## MFTU (http://judge.mipt.ru/mipt_cs_on_python3/)
         Lesson 3 - Number system (numerial base)
         Lesson 4 - Functions
         Lesson 5 - Arrays in Python
