@@ -6,7 +6,13 @@ t.shape('turtle')
 t.speed(15)
 
 
-def circle():
+def circle(radius):
+    for i in range(180):
+        t.forward(radius)
+        t.right(2)
+
+
+def double_circle():
     for i in range(180):
         t.forward(2)
         t.left(2)
@@ -16,5 +22,5 @@ def circle():
 
 
 for i in range(60, 240, 60):
-    circle()
+    double_circle()
     t.seth(i)
