@@ -12,9 +12,10 @@ def semicircle(radius):
         t.right(2)
 
 
-t.penup()
-t.goto(-250, 0)
-t.pendown()
-for i in range(5):
-    semicircle(2)
-    semicircle(0.5)
+if __name__ == '__main__':
+    t.penup()
+    t.goto(-250, 0)
+    t.pendown()
+    for i in range(5):
+        semicircle(2)
+        semicircle(0.5)
