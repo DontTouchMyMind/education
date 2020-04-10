@@ -20,7 +20,7 @@ def double_circle():
         t.forward(2)
         t.right(2)
 
-
-for i in range(60, 240, 60):
-    double_circle()
-    t.seth(i)
+if __name__ == '__main__':
+    for i in range(60, 240, 60):
+        double_circle()
+        t.seth(i)
