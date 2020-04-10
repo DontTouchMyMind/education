@@ -4,7 +4,17 @@ import turtle as t
 
 t.shape('turtle')
 t.left(90)
-for i in range(10):
-    t.circle(-50, 180, 100)
-    t.circle(-10, 180, 100)
-  
+
+
+def semicircle(radius):
+    for i in range(90):
+        t.forward(radius)
+        t.right(2)
+
+
+t.penup()
+t.goto(-250, 0)
+t.pendown()
+for i in range(5):
+    semicircle(2)
+    semicircle(0.5)
