@@ -2,7 +2,6 @@
 
 import turtle as t
 
-angle = 0
 t.shape('turtle')
 t.speed(15)
 
