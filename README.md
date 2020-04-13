@@ -35,6 +35,11 @@
         Lesson 17 - animations
         my_game
 ## MFTU (http://judge.mipt.ru/mipt_cs_on_python3/)
+        Lesson 1 
+            Practice: Turtle (14/14 exercises)
+        Lesson 2
+            Practice: Robot (1/32 exercises)
         Lesson 3 - Number system (numerial base)
+        
         Lesson 4 - Functions
         Lesson 5 - Arrays in Python
