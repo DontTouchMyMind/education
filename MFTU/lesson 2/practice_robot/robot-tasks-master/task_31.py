@@ -3,11 +3,8 @@
 from pyrob.api import *
 
 
-@task  # (delay=0.01)
+@task(delay=0.01)
 def task_8_30():
-    x = 0
-    counter = 0
-
     def left():
         while not wall_is_on_the_left():
             if not wall_is_beneath():
@@ -18,18 +15,16 @@ def task_8_30():
         while not wall_is_on_the_right():
             if not wall_is_beneath():
                 break
-
             move_right()
 
-    while not wall_is_on_the_left():
-        x += 1
-        move_left()
-    move_right(x)
-    while counter < 2:
-        print(x, counter)
+    while True:
         while wall_is_beneath():
-            left()
             right()
+            left()
+            if wall_is_beneath():
+                break
+        if wall_is_beneath():
+            break
         move_down()
 
 
