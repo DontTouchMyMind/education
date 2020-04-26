@@ -38,8 +38,10 @@
         Lesson 1 
             Practice: Turtle (14/14 exercises)
         Lesson 2
-            Practice: Robot (1/32 exercises)
+            Practice: Robot (32/32 exercises)
         Lesson 3 - Number system (numerial base)
-        
+            Practice: contest: "if, for, while"
         Lesson 4 - Functions
+            Practice: graphics primitives (graphics.py)
         Lesson 5 - Arrays in Python
+            Practice: physical modeling
