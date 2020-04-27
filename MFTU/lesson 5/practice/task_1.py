@@ -67,6 +67,6 @@ while True:
     coord = update_coords(coord, velocity)
     velocity = update_velocity(velocity, acceleration)
 
-    ball.move(coord.x, coord.y)
+    ball.move(velocity.x, velocity.y)
     check_coord()
     time.sleep(0.02)
