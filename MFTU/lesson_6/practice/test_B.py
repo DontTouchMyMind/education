@@ -9,16 +9,22 @@
 # Формат выходных данных
 #   Число лет, через сколько лет вклад составит не менее y рублей.
 
+
 numbers = [int(n) for n in input().split()]
-years = 0
-# x = numbers[0]
-# p = numbers[1]
-# y = numbers[2]
-if numbers[0] > numbers[2]:
+
+if numbers[0] == 0:
     print(int(0))
 else:
-    while numbers[0] < numbers[2]:
-        numbers[0] *= 1 + numbers[1] / 100
-        numbers[0] = int(100 * numbers[0]) / 100
-        years += 1
-    print(years)
+
+    years = 0
+    x = numbers[0]
+    p = numbers[1]
+    y = numbers[2]
+    if x > y:
+        print(int(0))
+    else:
+        while x < y:
+            x *= 1 + p / 100
+            x = int(100 * x) / 100
+            years += 1
+        print(years)
