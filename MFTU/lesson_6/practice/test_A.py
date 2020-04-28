@@ -10,5 +10,13 @@
 # Формат выходных данных
 #   Вывести "YES" без кавычек, если точка принадлежит кругу,
 #   "NO" без кавычек в противном случае.
+from math import sqrt
 
 numbers = [int(n) for n in input().split()]
+
+length = sqrt(numbers[0] ** 2 + numbers[1] ** 2)
+
+if length <= numbers[2]:
+    print('YES')
+else:
+    print('NO')
