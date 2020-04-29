@@ -22,25 +22,46 @@
 #
 # Формат выходных данных
 #   Четыре числа, разделенных пробелом.
-numbers = []
-x = 0
-counter = 0
-z = 0
-S = 0
+from sys import exit
+
+numbers = []  # Empty list
+len_list = 0  # List length
+division = 0
+
 while True:
     x = input()
     if x == '#':
         break
+    elif len(x) > 3:
+        exit()
     else:
         numbers.append(int(x))
-        counter += 1
-# print(numbers)
-# mean = sum(numbers) / counter   # Arithmetical mean value
-# print(mean)
-# max_value = max(numbers)
-# print(max_value)
-# min_value = min(numbers)
-# print(min_value)
+        len_list += 1
 
-# Необходиммо считать три числа из списка и удалить их
-# Проверять наполнене списка на каждой итерации цикла
+mean = sum(numbers) / len_list  # Arithmetical mean value
+max_value = max(numbers)
+min_value = min(numbers)
+
+
+def sum_of_triples():
+    """
+    Функция считает сумму первых трех чисел списка,
+    удаляет их, затем делит сумму на последний элемент списка.
+    Function calculates the sum of the first three numbers of the list,
+    deletes them, then divides the sum by the last elements of the list.
+    :return: Остаток от деления.
+             Modulo
+    """
+    sum_var = 0
+    divider = numbers[2]
+    for i in range(3):
+        sum_var += numbers.pop(0)
+    result = sum_var % divider
+    return result
+
+
+while len_list != 0:
+    division += sum_of_triples()
+    len_list -= 3
+
+print(round(mean, 3), max_value, min_value, division, sep=' ')
