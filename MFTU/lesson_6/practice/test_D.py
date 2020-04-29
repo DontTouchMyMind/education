@@ -39,9 +39,10 @@ while True:
             numbers[i] = int(numbers[i + 1])
         numbers[len(numbers) - 1] = tmp
 
-        for i in range(len(numbers)):
-            print(numbers[i], end='')
-            print(' ', end='')
+        # for i in range(len(numbers)):
+        #     print(numbers[i], end='')
+        #     print(' ', end='')
+        print(*numbers)
         exit()
     else:
         numbers.append(int(x))
