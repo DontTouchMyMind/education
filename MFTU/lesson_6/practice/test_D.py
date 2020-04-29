@@ -22,8 +22,8 @@
 #
 # Формат выходных данных
 #   Четыре числа, разделенных пробелом.
-from sys import exit
 
+from sys import exit
 numbers = []  # Empty list
 len_list = 0  # List length
 division = 0
@@ -33,6 +33,15 @@ while True:
     if x == '#':
         break
     elif len(x) > 3:
+        numbers = x.split(sep=' ')
+        tmp = int(numbers[0])
+        for i in range(len(numbers) - 1):
+            numbers[i] = int(numbers[i + 1])
+        numbers[len(numbers) - 1] = tmp
+
+        for i in range(len(numbers)):
+            print(numbers[i], end='')
+            print(' ', end='')
         exit()
     else:
         numbers.append(int(x))
