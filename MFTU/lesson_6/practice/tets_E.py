@@ -18,9 +18,4 @@ while True:
 result = sum((sorted(value, reverse=True)
               for student_id, value in sorted(my_dict.values(), reverse=True)), [])
 
-print(result)
 print(*result)
-r1 = sorted(my_dict.values(), reverse=True)
-print(r1)
-r2 = sum((sorted(value, reverse=False) for student_id, value in r1), [])
-print(r2)
