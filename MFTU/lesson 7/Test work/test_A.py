@@ -32,7 +32,7 @@ def check_weight(weight_car, weight_piano, weight_frost, max_weight):
     Function calculates the maximum weight of the car with a load
     and calculates whether the car will pass over the bridge.
     """
-    sum_weight = weight_car + weight_piano + weight_frost
+    sum_weight = weight_frost + weight_piano + weight_car
     return True if sum_weight <= max_weight else False
 
 
@@ -72,10 +72,17 @@ for i in range(8):
     if x > 100:
         break
     numbers.append(x)
-
-result_weight = check_weight(numbers[0], numbers[2], numbers[4], numbers[6])
 result_height = check_height(numbers[1], numbers[3], numbers[5], numbers[7])
-print('YES' if result_weight and result_height else 'NO')
+if result_height:
+    numbers[4] = 0
+    result_weight = check_weight(numbers[0], numbers[2], numbers[4], numbers[6])
+    print('YES' if result_weight else 'NO')
+else:
+    if numbers[5] >= numbers[3]:
+        print('NO')
+    else:
+        result_weight = check_weight(numbers[0], numbers[2], numbers[4], numbers[6])
+        print('YES' if result_weight else 'NO')
 
 # if __name__ == '__main__':
 #     test_function(check_weight)
