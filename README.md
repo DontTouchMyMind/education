@@ -45,3 +45,7 @@
             Practice: graphics primitives (graphics.py)
         Lesson 5 - Arrays in Python
             Practice: physical modeling
+        Lesson 6 - Quadratic sorting O(n**2)
+            Practice: contest: "using arrays"
+        Lesson 7 - Recursion (introduction)
+            Practice - Test work   
