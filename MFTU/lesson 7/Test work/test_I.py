@@ -20,10 +20,15 @@
 #   максимальное значение входной последовательности за исключением последних 5 элементов.
 
 numbers = []
+result = 0
+x = 0
 while True:
     number = int(input())
     if number == 0:
         break
     numbers.append(number)
+    if len(numbers) > 5:
+        x = numbers.pop(0)
+    result = result if result > x else x
 
-print(max(numbers[:-5]))
+print(result)
