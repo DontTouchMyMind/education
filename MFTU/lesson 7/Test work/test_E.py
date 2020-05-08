@@ -9,14 +9,20 @@
 # Формат выходных данных
 #   Одно число — номер первого числа трибоначчи, превосходящее заданное во входных данных число.
 
-def createTribonacci(limit, init=(2, 0, -1, 1)):
-    a, b, c, d = init
-    for _ in range(limit):
-        a, b, c, d = b, c, d, 2 * d - a
-        yield d
+def trib(n):
+    if n == 2:
+        return 1
+    elif n in (0, 1):
+        return 0
+    return trib(n - 1) + trib(n - 2) + trib(n - 3)
 
 
-limit = int(input())
+number = int(input())
+n = 0
+while True:
+    trib(n)
+    if trib(n) > number:
+        break
+    n += 1
 
-gen = createTribonacci(limit, init=(-3, 1, 1, -1))
-print(*gen)
+print(n)
