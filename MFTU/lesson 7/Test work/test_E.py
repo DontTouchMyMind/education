@@ -10,19 +10,20 @@
 #   Одно число — номер первого числа трибоначчи, превосходящее заданное во входных данных число.
 
 def trib(n):
+    global number
     if n == 2:
         return 1
     elif n in (0, 1):
         return 0
-    return trib(n - 1) + trib(n - 2) + trib(n - 3)
-
+    else:
+        result = trib(n - 1) + trib(n - 2) + trib(n - 3)
+        if result > number:
+            print(n)
+            exit()
+        return result
 
 number = int(input())
-n = 0
-while True:
-    trib(n)
-    if trib(n) > number:
-        break
-    n += 1
-
-print(n)
+if number == 0:
+    print(2)
+else:
+    trib(100)
