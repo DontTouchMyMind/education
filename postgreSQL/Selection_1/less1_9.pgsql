@@ -1,13 +1,9 @@
-CREATE TABLE person
-(
-    person_id int PRIMARY KEY,
-    first_name varchar(64) NOT NULL,
-    second_name varchar(64) NOT NULL  
-);
-CREATE TABLE passport
-(
-    pasport_id int PRIMARY KEY,
-    serial_number int NOT NULL,
-    registration text NOT NULL,
-    fk_passport_person int REFERENCES person(person_id)
-)
+INSERT INTO person VALUES (1, 'John', 'Snow');
+INSERT INTO person VALUES (2, 'Ned', 'Stark');
+INSERT INTO person VALUES (3, 'Rob', 'Baratheon');
+
+INSERT INTO passport
+VALUES
+(1, 123456, 'Winterfell', 1),
+(2, 789012, 'Winterfell', 2),
+(3, 345678, 'King''s Landing', 3)
