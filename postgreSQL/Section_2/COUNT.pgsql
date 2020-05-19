@@ -1,3 +1,4 @@
-/*Задача - посчитать кол-во заказов*/
-SELECT COUNT (*) 
-FROM orders
+/*Задача - посчитать кол-во стран,
+            где работают все сотрудники*/
+SELECT COUNT (country)
+FROM employees
