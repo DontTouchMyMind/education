@@ -1,5 +1,4 @@
 # Education
-
 ## contents GeekBrains
         Lesson 4 - Built-in types and operation with them
         Lesson 6 - Case study "Guess the number"
@@ -18,7 +17,7 @@
         Source code in 'code'  
         Matrix transpose
         Game for terminal "Guess the world"
-## Tkinter(https://www.youtube.com/channel/UChHyBDvI5AJmcPv36M6PUrQ)
+## Tkinter  [***youtube***](https://www.youtube.com/channel/UChHyBDvI5AJmcPv36M6PUrQ)  
         Lesson 4 - grid
         Lesson 5 - bind
         Lesson 6 - mouse_events
@@ -34,13 +33,13 @@
         Lesson 16 - static shape changes
         Lesson 17 - animations
         my_game
-## MFTU (http://judge.mipt.ru/mipt_cs_on_python3/)
+## MFTU [***mipt***](http://judge.mipt.ru/mipt_cs_on_python3/)
         Lesson 1 
             Practice: Turtle (14/14 exercises)
         Lesson 2
             Practice: Robot (32/32 exercises)
         Lesson 3 - Number system (numerial base)
-            Practice: contest: "if, for, while"
+             Practice: contest: "if, for, while"
         Lesson 4 - Functions
             Practice: graphics primitives (graphics.py)
         Lesson 5 - Arrays in Python
