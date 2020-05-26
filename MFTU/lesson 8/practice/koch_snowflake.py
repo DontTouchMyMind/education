@@ -6,6 +6,12 @@ size = 100
 
 
 def koch_curve(length, n):
+    """
+    Function draws a koch curve
+    :param length: simple line length
+    :param n: recursion depth
+    :return:
+    """
     if n == 0:
         forward(length)
         return
@@ -19,6 +25,12 @@ def koch_curve(length, n):
 
 
 def koch_snowflake(length, n):
+    """
+    Function draws a triangle of koch curve
+    :param length: length for a koch curve
+    :param n: recursion depth
+    :return:
+    """
     for i in range(3):
         koch_curve(length, n)
         right(120)
