@@ -1,6 +1,12 @@
 from turtle import *
 
 def draw(l, n):
+    """
+    Function draws a simple fractal
+    :param l: length
+    :param n: recursion depth
+    :return:
+    """
     if n == 0:
         left(180)
         return
