@@ -6,6 +6,12 @@ size = 50
 
 
 def koch_curve(length, n):
+    """
+    Function draws a koch curve
+    :param length: simple line length
+    :param n: recursion depth
+    :return:
+    """
     if n == 0:
         forward(length)
         return
