@@ -1,7 +1,7 @@
 def fibo(n):
     """
     Function calculates of fibonacci number
-    :param n:
+    :param n: recursion depth
     :return:
     """
     if n == 0:
