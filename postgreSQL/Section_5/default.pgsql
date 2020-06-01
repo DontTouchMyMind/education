@@ -15,3 +15,5 @@ VALUES
 
 SELECT * FROM customer;
 
+ALTER TABLE customer
+ALTER COLUMN status SET DEFAULT 'r';
