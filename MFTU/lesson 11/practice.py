@@ -25,7 +25,7 @@ def fib(n):
 def traj_num(n):
     """
     Колличество траекторий достичь точки n из точки 1, можно двигаться +1, +2, +3 клетки.
-    :param n: type:int; целевое клетка.
+    :param n: type:int; целевая клетка.
     :return: type:int; кол-во возможных траекторий.
     """
     k = [0, 1] + [0] * n
@@ -37,7 +37,7 @@ def traj_num(n):
 def count_min_cost(n, price: list):
     """
     Минимальная стоимость достижения клетки n.
-    :param n: type:int; целевое клетка.
+    :param n: type:int; целевая клетка.
     :param price: type:list; список стоимостей посещения каждой клетки.
     :return: минимальная суммарная стоимость достижения заданной клетки.
     """
@@ -50,7 +50,7 @@ def count_min_cost(n, price: list):
 def count_min_cost_path(n, price: list):
     """
     Функция вычисляет по какому пути прошел кузнечик.
-    :param n: type:int; целевое клетка.
+    :param n: type:int; целевая клетка.
     :param price: type:list; список стоимостей посещения каждой клетки.
     :return: type:list; список вершин через которые прошел кузнечик.
     """
@@ -72,9 +72,30 @@ def count_min_cost_path(n, price: list):
     return path
 
 
+def king(n: int, m: int):
+    """
+    Функция вычисляет сколькими способами шахматный король
+    может добраться до заданной клетке на доске,
+    если он может двигаться 3-мя способами:
+    вправо, вниз, вниз-вправо(по горизонтали).
+    :param n: type:int; первая координата целевой клетки.
+    :param m: type:int; вторая координата целевой клетки.
+    :return: type:int; количство возможных траекторий.
+    """
+    desk = [[0] * (m + 1) for i in range(n + 1)]
+    desk[0][0] = 1
+    print(desk)
+    for i in range(1, n + 1):
+        for j in range(1, m + 1):
+            desk[i][j] = desk[i - 1][j] + desk[i][j - 1] + desk[i - 1][j - 1]
+    print(desk)
+    return desk[n][m]
+
+
 if __name__ == '__main__':
     print(fib_rec(5))
     print(fib(5))
     print(traj_num(5))
     print(count_min_cost(5, [0, 1, 2, 3, 4, 5]))
     print(count_min_cost_path(5, [0, 1, 2, 3, 4, 5]))
+    print(king(4, 5))
