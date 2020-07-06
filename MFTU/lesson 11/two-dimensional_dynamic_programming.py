@@ -37,7 +37,38 @@ def len_gcs(A, B):  # greatest common subsequence
     return F[-1][-1]  # F[len(A)][len(B)]
 
 
+# Поиск самой общей подпоследовательности
+
+def gcs(A, B):
+    """
+    Функция расчитывает саму общую подпоследовательность.
+    :param A: Первая последовательность.
+    :param B: Вторая последовательность.
+    :return: type: list; Наибольшая общая подпоследовательности.
+    """
+    F = [[0] * (len(B) + 1) for i in range(len(A) + 1)]
+    for i in range(1, len(A) + 1):
+        for j in range(1, len(B) + 1):
+            if A[i - 1] == B[j - 1]:
+                F[i][j] = 1 + F[i - 1][j - 1]
+            else:
+                F[i][j] = max(F[i - 1][j], F[i][j - 1])
+    result = []
+    i = len(A)
+    j = len(B)
+    while i > 0:
+        if F[i][j] > F[i - 1][j - 1]:
+            result.append(A[i - 1])
+        i -= 1
+        j -= 1
+    result = result[::-1]
+
+    return result
+
+
 if __name__ == '__main__':
     print(king(6, 6))
     print(len_gcs([1, 2, 3, 4, 5], [1, 2, 3, 4, 6]))
     print(len_gcs('fork', 'work'))
+    print(gcs([1, 2, 3, 4, 5], [1, 2, 3, 4, 6]))
+    print(gcs('fork', 'work'))
