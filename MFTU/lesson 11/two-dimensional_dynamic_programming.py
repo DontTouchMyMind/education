@@ -20,7 +20,7 @@ def king(n: int, m: int):
 # Наибольшая общая подпоследавательность.
 
 
-def len_gcs(A, B):  # greatest common subsequence
+def len_gcs(A, B):  # greatest common subsequence.
     """
     Функция расчитывает длину наибольшей общей подпоследовательности.
     :param A: Первая последовательность.
@@ -37,7 +37,7 @@ def len_gcs(A, B):  # greatest common subsequence
     return F[-1][-1]  # F[len(A)][len(B)]
 
 
-# Поиск самой общей подпоследовательности
+# Поиск самой общей подпоследовательности.
 
 def gcs(A, B):
     """
@@ -66,9 +66,53 @@ def gcs(A, B):
     return result
 
 
+# Наибольшая возрастающая подпоследовательность.
+def gis(A):  # greatest increasing subsequence.
+    """
+    Функция расчитывает длину наибольшей возрастающей подпоследовательности.
+    :param A: Данная последовательность.
+    :return: type: int; Длина наибольшей возрастающей подпоследовательности.
+    """
+    F = [0] * (len(A) + 1)
+
+    for i in range(1, len(A) + 1):
+        m = 0  # This is the maximum variable.
+        for j in range(0, i):
+            if A[i - 1] > A[j] and F[j] > m:
+                m = F[j]
+        F[i] = m + 1
+    return F[len(A)]
+
+
+def gis_2(A):  # Еще одна реализация.
+    """
+    Функция расчитывает длину наибольшей возрастающей подпоследовательности.
+    :param A: Данная последовательность.
+    :return: type: int; Длина наибольшей возрастающей подпоследовательности.
+    """
+    F = [0] * len(A)
+    for i in range(len(A)):
+        for j in range(i):
+            if A[j] < A[i] and F[j] > F[i]:
+                F[i] = F[j]
+        F[i] += 1
+    return F[i]
+
+
+# Задача о рюкзаке.
+
+
+def baggage():
+    pass
+
+
 if __name__ == '__main__':
     print(king(6, 6))
     print(len_gcs([1, 2, 3, 4, 5], [1, 2, 3, 4, 6]))
     print(len_gcs('fork', 'work'))
     print(gcs([1, 2, 3, 4, 5], [1, 2, 3, 4, 6]))
     print(gcs('fork', 'work'))
+    print(gis([1, 2, 3, 4, 5]))
+    print(gis_2([1, 2, 3, 4, 5]))
+    print(gis_2([5, 10, 6, 12, 3, 24, 7, 8]))
+    print(gis([5, 10, 6, 12, 3, 24, 7, 8]))
