@@ -26,14 +26,58 @@
                     substring searching, Knuth–Morris–Pratt algorithm.
             Practice - Test work. 
 
-## contents Udemy - "Python3"
-*Python3 basic*
-> 1. Type string
-> 2. Function of string
-> 3. String format
->
-## contents Udemy - "PostgreSQL"
-## contents  - "Grokking Algorithms"
+## Contents Udemy - "Python3"
+*Python3 basic.*
+>1. Variables.
+>2. Type string.
+>3. Function of string.
+>4. String formatting.
+>5. Comparison operators.
+>6. File operation.
+>7. Str, bytes, bytearray.
+>8. Practical task.
+
+*Collections, loops and logic in Python3.*
+>1. List.
+>2. Dict.
+>3. OrderedDict vs. dict.
+>4. Tuple.
+>5. Named tuple.
+>6. Logic with condition.
+>7. Set.
+>8. For.
+>9. List comprehension.
+>10. While, continue, break.
+>11. Practical task.
+
+*Collections, loops and logic in Python3.*
+>1. Functions help.
+>2. Builtin functions.
+>3. Basics of function.
+>4. lambda-functions.
+>5. Nested functions and scope of the variables.
+>6. Decorators.
+>7. @wraps.
+>8. Practical task.
+
+*Errors and exceptions. Automated tests*
+>1. Basics of error-handling.
+>2. Custom types of exception.
+>3. Basics of unit-testing.
+
+*Basic of OOP.*
+>1. Basics of classes.
+>2. Attributes and methods.
+>3. Constants. Protected and private attributes.
+>4. @staticmethod and @classmethod.
+>5. Inheritance and polymorphism.
+>6. Multiple inheritance.
+>7. Mix in.
+>8. Abstract basic class.
+>9. Dunder-init method.
+>10. Practical task p1.
+## Contents Udemy - "PostgreSQL"
+## Contents  - "Grokking Algorithms"
         Chapter 1 - "Binary search"
         Chapter 2 - "Selection sort"
         Chapter 3 - "Recursion"
@@ -44,7 +88,7 @@
         Chapter 8 - 
         Chapter 9 - 
         
-## contents GeekBrains
+## Contents GeekBrains
         Lesson 4 - Built-in types and operation with them.
         Lesson 6 - Case study "Guess the number".
         Lesson 7 - Practical tasks.
