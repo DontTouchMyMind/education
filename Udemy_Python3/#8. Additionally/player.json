@@ -1,0 +1,16 @@
+{
+  "tournaments": [
+    {
+      "name": "Aeroflot Open",
+      "year": 2010
+    },
+    {
+      "name": "Fide World Cup",
+      "year": 2018
+    },
+    {
+      "name": "Fide Grand Prix",
+      "year": 2020
+    }
+  ]
+}
