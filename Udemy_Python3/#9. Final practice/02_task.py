@@ -6,17 +6,7 @@
 # Примеры Full House: (A, A, Q, Q, Q), (10, 10, 10, J, J)
 
 def is_full_house(hand: list) -> bool:
-    data_dict = {}  # Для хранения данных о достоинстве карт и их количестве.
-
-    for i in hand:
-        if i in data_dict:
-            data_dict[i] += 1
-        else:
-            data_dict[i] = 1
-
-    number_of_cards = list(data_dict.values())
-
-    return True if number_of_cards.count(3) and number_of_cards.count(2) else False
+    return all([hand.count(i) >= 2 for i in hand])
 
 
 def is_full_house_test():
