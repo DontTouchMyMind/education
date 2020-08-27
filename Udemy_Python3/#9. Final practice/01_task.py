@@ -1,11 +1,7 @@
 # Напишите функцию count_vowels, которая принимает строку и возвращает количество гласных в ней.
 
 def count_vowels(input_str: str):
-    count = 0
-    for letter in input_str:
-        if letter in 'aeio':
-            count += 1
-    return count
+    return sum([1 for letter in input_str if letter in 'aeuio'])
 
 
 def count_vowels_test():
