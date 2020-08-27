@@ -20,7 +20,7 @@ def is_full_house(hand: list) -> bool:
 
 
 def is_full_house_test():
-    print(f'Te test of the function count_vowels begin...')
+    print(f'Te test of the function is_full_house begin...')
     print('#Test 1 was successful.' if is_full_house(['A', 'A', 'A', 'K', 'K']) is True else '#Test 1 failed.')
     print('#Test 2 was successful.' if is_full_house(['3', 'J', 'J', 'J', '3']) is True else '#Test 2 failed.')
     print('#Test 3 was successful.' if is_full_house(['3', '4', '2', 'J', '3']) is False else '#Test 3 failed.')
