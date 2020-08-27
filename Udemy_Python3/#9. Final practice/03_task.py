@@ -29,11 +29,11 @@ class IceCream:
 
 
 def sweetest_icecream(lst):
-    result = []
-    for _ in lst:
-        result.append(_.sweetest())
-    return max(result)
-
+    # result = []
+    # for _ in lst:
+    #     result.append(_.sweetest())
+    # return max(result)
+    return max([_.sweetest() for _ in lst])
 
 def sweetest_icecream_test():
     print(f'Te test of the function sweetest_icecream begin...')
