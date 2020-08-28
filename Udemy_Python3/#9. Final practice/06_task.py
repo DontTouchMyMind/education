@@ -44,10 +44,10 @@ def parce_roman(roman: str):
     }
     roman = roman.upper()
     for i, c in enumerate(roman):
-        if i + 1 < len(roman) and romans[roman[i]] < romans[roman[i + 1]]:  # Protection against index out of range.
-            result -= romans[roman[i]]
+        if i + 1 < len(roman) and romans[c] < romans[roman[i + 1]]:  # Protection against index out of range.
+            result -= romans[c]
         else:
-            result += romans[roman[i]]
+            result += romans[c]
     return result
 
 
