@@ -26,7 +26,8 @@
 # Защиту от некорректного ввода реализовать по вашему желанию
 # (можно не делать, но для тренировки всегда полезно).
 
-def parce_roman(roman):
+def parce_roman(roman: str) -> int:
+    result = 0
     romans = {
         'I': 1,
         'V': 5,
@@ -36,3 +37,22 @@ def parce_roman(roman):
         'D': 500,
         'M': 1000
     }
+    roman = roman.upper()
+    for i, c in enumerate(roman):
+        if i + 1 < len(roman) and romans[roman[i]] < romans[roman[i + 1]]:
+            result -= romans[roman[i]]
+        else:
+            result += romans[roman[i]]
+    return result
+
+
+def parce_roman_test():
+    print(f'Te test of the function parce_roman begin...')
+    print('#Test 1 was successful.' if parce_roman('XI') == 11 else '#Test 1 failed.')
+    print('#Test 2 was successful.' if parce_roman('XVI') == 16 else '#Test 2 failed.')
+    print('#Test 3 was successful.' if parce_roman('XIV') == 14 else '#Test 3 failed.')
+    print('#Test 4 was successful.' if parce_roman('xXiV') == 24 else '#Test 4 failed.')
+
+
+if __name__ == '__main__':
+    parce_roman_test()
