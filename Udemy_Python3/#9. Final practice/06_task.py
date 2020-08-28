@@ -26,7 +26,12 @@
 # Защиту от некорректного ввода реализовать по вашему желанию
 # (можно не делать, но для тренировки всегда полезно).
 
-def parce_roman(roman: str) -> int:
+def parce_roman(roman: str):
+    """
+    The Functions convert Romans numbers to Arabic numbers.
+    :param roman: type:str; input roman number.
+    :return: type:int; output arabic number.
+    """
     result = 0
     romans = {
         'I': 1,
@@ -39,7 +44,7 @@ def parce_roman(roman: str) -> int:
     }
     roman = roman.upper()
     for i, c in enumerate(roman):
-        if i + 1 < len(roman) and romans[roman[i]] < romans[roman[i + 1]]:
+        if i + 1 < len(roman) and romans[roman[i]] < romans[roman[i + 1]]:  # Protection against index out of range.
             result -= romans[roman[i]]
         else:
             result += romans[roman[i]]
