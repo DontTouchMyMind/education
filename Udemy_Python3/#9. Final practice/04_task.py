@@ -15,7 +15,6 @@ def check_sequence_test():
     print('#Test 2 was successful.' if check_sequence([3, 2, 1]) == -1 else '#Test 2 failed.')
     print('#Test 3 was successful.' if check_sequence([1, 2, 1]) == 0 else '#Test 3 failed.')
     print('#Test 4 was successful.' if check_sequence([1, 1]) == 0 else '#Test 4 failed.')
-    pass
 
 
 if __name__ == '__main__':
