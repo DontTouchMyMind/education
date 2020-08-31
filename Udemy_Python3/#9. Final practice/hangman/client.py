@@ -1,7 +1,4 @@
-from Udemy_Python3.
-
-'#9.Final practice'.handman.game
-import Game
+from handman.game import Game
 from hangman.game_status import GameStatus
 
 
