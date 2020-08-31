@@ -27,64 +27,56 @@ import random
 
 class Game:
 
-    def __init__(self, try_number: int):
-        self.number = 1
-        self.try_number = try_number
+    def __init__(self, attempts: int):
+        self.attempts = attempts
         self.game_word = []
         self.letter = ''
-        self.attempts = 1
-        self.remaining_attempts = self.try_number - self.attempts
         self.player_word = []
 
-    def get_word(self):
-        # with open(r'/media/WorkSpace/Project/Python/git'
-        #           r'/education/Udemy_Python3/'
-        #           r'#9. Final practice/WordsStockRus.txt', 'r') as file:
-        with open(r'/home/belousov/My_Proj/education/Udemy_Python3/#9. Final practice/WordsStockRus.txt', 'r') as file:
+    def request_word(self):
+        with open(r'/media/WorkSpace/Project/Python/git'
+                  r'/education/Udemy_Python3/'
+                  r'#9. Final practice/WordsStockRus.txt', 'r') as file:
+            # with open(r'/home/belousov/My_Proj/education/Udemy_Python3/#9. Final practice/WordsStockRus.txt', 'r') as file:
             lines = file.readlines()
-        self.game_word = list(lines[random.randint(0, 11650)])[:-1]  # .strip() - удалит \n
+        self.game_word = list(lines[random.randint(0, 11650)].strip())  # .strip() - удалит \n, аналогично [:-1]
         return self.game_word
 
-    def make_try(self, input_letter):
-        # добавить проверку: есть ли буква в слове.
-        self.attempts += 1  # добавить условие: при неправильном вводе.
+    def make_attempt(self, input_letter):
         self.player_word.append(input_letter)
         self.letter = input_letter
-        # Полностью перенести сюда подсчет колиества ошибок из __init__, оно там постоянно обновляется.
+        if input_letter not in self.game_word:
+            self.attempts -= 1
 
     def already_used_letter(self):
-        return sorted(set(self.player_word))
+        return sorted(self.player_word)
 
     def get_visible_word(self):
         return list(letter if letter in self.player_word else '_' for letter in self.game_word)
 
 
-# 1. Запрос уровня сложности
-# 2. Запуск и инициализация игры,
-# 3. Генерация слова
-# 4. Запуск цикла
-#       Проверка победителя
-#       Вывод букв которые игрок назвал
-#       Запрос буквы
-#       Вывод результата
-#       Вывод кол-ва оставшихся попыток
-
 difficult = input('Enter number of attempts: ')
 
 g = Game(int(difficult))
 
-g.get_word()
+g.request_word()
 
-while True:
-    # Добавить проверку кол-ва попыток.
-    if g.player_word == g.game_word:
+while g.attempts != 0:
+    if g.get_visible_word() == g.game_word:
         print('Congratulations! You are winner!')
-        play_more = input('Do you want play more? (say "yes" or "no"): ')
+        play_more = input('Do you want play more? (say "yes" to continue playing! ): ')
         if play_more == 'yes':
-            g.game_word()
+            g.player_word = []
+            g.request_word()
         else:
             break
-    print(g.already_used_letter())
-    g.make_try(input('Enter your letter: '))
     print(g.get_visible_word())
-    print(g.remaining_attempts)
+    g.make_attempt(input('Enter your letter: '))
+    print(f'You already used - {g.already_used_letter()}')
+    print(f'You have {g.attempts} attempts left.')
+
+else:
+    print('Sorry! You lose! You have no attempts left.')
+    print(f'The hidden word was {g.game_word}')
+
+print('Goodbye! See you soon!')
