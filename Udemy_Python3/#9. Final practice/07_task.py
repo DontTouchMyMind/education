@@ -37,17 +37,20 @@ class Game:
         self.player_word = []
 
     def get_word(self):
-        with open(r'/media/WorkSpace/Project/Python/git'
-                  r'/education/Udemy_Python3/'
-                  r'#9. Final practice/WordsStockRus.txt', 'r') as file:
+        # with open(r'/media/WorkSpace/Project/Python/git'
+        #           r'/education/Udemy_Python3/'
+        #           r'#9. Final practice/WordsStockRus.txt', 'r') as file:
+        with open(r'/home/belousov/My_Proj/education/Udemy_Python3/#9. Final practice/WordsStockRus.txt', 'r') as file:
             lines = file.readlines()
-        self.game_word = list(lines[random.randint(0, 11650)])[:-1]
+        self.game_word = list(lines[random.randint(0, 11650)])[:-1]  # .strip() - удалит \n
         return self.game_word
 
     def make_try(self, input_letter):
-        self.attempts += 1
+        # добавить проверку: есть ли буква в слове.
+        self.attempts += 1  # добавить условие: при неправильном вводе.
         self.player_word.append(input_letter)
         self.letter = input_letter
+        # Полностью перенести сюда подсчет колиества ошибок из __init__, оно там постоянно обновляется.
 
     def already_used_letter(self):
         return sorted(set(self.player_word))
@@ -73,6 +76,7 @@ g = Game(int(difficult))
 g.get_word()
 
 while True:
+    # Добавить проверку кол-ва попыток.
     if g.player_word == g.game_word:
         print('Congratulations! You are winner!')
         play_more = input('Do you want play more? (say "yes" or "no"): ')
