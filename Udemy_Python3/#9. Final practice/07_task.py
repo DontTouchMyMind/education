@@ -49,7 +49,7 @@ class Game:
             self.attempts -= 1
 
     def already_used_letter(self):
-        return sorted(self.player_word)
+        return sorted(set(self.player_word))
 
     def get_visible_word(self):
         return list(letter if letter in self.player_word else '_' for letter in self.game_word)
