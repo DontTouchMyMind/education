@@ -1,4 +1,5 @@
-# Education
+# My education notepad.
+
 ## MFTU [***mipt***](http://judge.mipt.ru/mipt_cs_on_python3/)
         Lesson 1 
             Practice: Turtle (14/14 exercises).
