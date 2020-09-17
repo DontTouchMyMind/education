@@ -1,5 +1,6 @@
-# Education
-## MFTU [***mipt***](http://judge.mipt.ru/mipt_cs_on_python3/)
+# My education notepad.
+
+### MFTU [***mipt***](http://judge.mipt.ru/mipt_cs_on_python3/)
         Lesson 1 
             Practice: Turtle (14/14 exercises).
         Lesson 2
@@ -26,7 +27,7 @@
                     substring searching, Knuth–Morris–Pratt algorithm.
             Practice - Test work. 
 
-## Contents Udemy - "Python3"
+### Contents Udemy - "Python3"
 *Python3 basic.*
 >1. Variables.
 >2. Type string.
@@ -76,8 +77,8 @@
 >8. Abstract basic class.
 >9. Dunder-init method.
 >10. Practical task p1.
-## Contents Udemy - "PostgreSQL"
-## Contents  - "Grokking Algorithms"
+### Contents Udemy - "PostgreSQL"
+### Contents  - "Grokking Algorithms"
         Chapter 1 - "Binary search"
         Chapter 2 - "Selection sort"
         Chapter 3 - "Recursion"
@@ -88,7 +89,7 @@
         Chapter 8 - 
         Chapter 9 - 
         
-## Contents GeekBrains
+### Contents GeekBrains
         Lesson 4 - Built-in types and operation with them.
         Lesson 6 - Case study "Guess the number".
         Lesson 7 - Practical tasks.
@@ -102,11 +103,11 @@
         Lesson 15 - Pactical tasks.
         Lesson 16 - Case study "Console for file manager".
         Lesson 17 - Practical task.
-## Intense_Python (GeekBrains portal)
+### Intense_Python (GeekBrains portal)
         Source code in 'code'.
         Matrix transpose.
         Game for terminal "Guess the world".
-## Tkinter  [***youtube***](https://www.youtube.com/channel/UChHyBDvI5AJmcPv36M6PUrQ)  
+### Tkinter  [***youtube***](https://www.youtube.com/channel/UChHyBDvI5AJmcPv36M6PUrQ)  
         Lesson 4 - grid.
         Lesson 5 - bind.
         Lesson 6 - mouse_events.
