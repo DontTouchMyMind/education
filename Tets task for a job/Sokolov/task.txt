@@ -1,0 +1,13 @@
+есть модель Tree
+class Tree(models.Model):
+    name = CharField
+    sort = IntegerField
+    parent = ForeignKey('self')
+    level = IntegerField
+где level - уровень вложенности (0 - самый верхний родитель)
+
+Нужно сделать структуру типа:
+[{"name": '...', 'children': [{...}]}, ...]
+отсортировано всё будет по sort
+
+Ответ прислать ссылкой на gistfile.
